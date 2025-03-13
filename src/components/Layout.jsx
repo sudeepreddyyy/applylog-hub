@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { BriefcaseIcon, CalendarIcon, PlusIcon, HomeIcon, BarChartIcon, LogInIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
   const location = useLocation();
@@ -51,7 +52,7 @@ const Navigation = () => {
 
 export default function Layout({ children }) {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white to-accent">
+    <div className="relative min-h-screen bg-gradient-to-b from-white to-accent dark:from-gray-900 dark:to-gray-800">
       <header className="glass sticky top-0 z-40 border-b">
         <div className="container flex h-16 items-center px-4 md:px-6">
           <div className="flex items-center w-8 absolute">
@@ -63,7 +64,8 @@ export default function Layout({ children }) {
               <p className="text-xs text-muted-foreground">by SudeepAngamgari</p>
             </div>
           </div>
-          <div className="w-8 flex justify-end">
+          <div className="w-auto flex items-center gap-2 justify-end">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" className="rounded-full">
               <LogInIcon className="h-5 w-5" />
               <span className="sr-only">Login / Signup</span>
