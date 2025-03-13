@@ -52,15 +52,17 @@ export default function Layout({ children }) {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-white to-accent">
       <header className="glass sticky top-0 z-40 border-b">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center space-x-2">
+        <div className="container flex h-16 items-center px-4 md:px-6">
+          <div className="flex items-center w-8 absolute">
             <BriefcaseIcon className="h-6 w-6 text-primary" />
-            <div>
+          </div>
+          <div className="flex-1 flex justify-center items-center">
+            <div className="text-center">
               <h1 className="text-xl font-semibold tracking-tight">ApplyLog</h1>
               <p className="text-xs text-muted-foreground">by SudeepAngamgari</p>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="w-8 flex justify-end">
             <div className="h-8 w-8 rounded-full bg-muted"></div>
           </div>
         </div>
@@ -74,4 +76,3 @@ export default function Layout({ children }) {
     </div>
   );
 }
-
