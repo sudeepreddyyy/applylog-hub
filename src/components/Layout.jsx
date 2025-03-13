@@ -55,7 +55,10 @@ export default function Layout({ children }) {
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <BriefcaseIcon className="h-6 w-6 text-primary" />
-            <h1 className="text-xl font-semibold tracking-tight">ApplyLog</h1>
+            <div>
+              <h1 className="text-xl font-semibold tracking-tight">ApplyLog</h1>
+              <p className="text-xs text-muted-foreground">by SudeepAngamgari</p>
+            </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="h-8 w-8 rounded-full bg-muted"></div>
@@ -71,3 +74,4 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
