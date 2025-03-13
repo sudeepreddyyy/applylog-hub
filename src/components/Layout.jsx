@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BriefcaseIcon, CalendarIcon, PlusIcon, HomeIcon, BarChartIcon } from 'lucide-react';
+import { BriefcaseIcon, CalendarIcon, PlusIcon, HomeIcon, BarChartIcon, LogInIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
   const location = useLocation();
@@ -63,7 +64,10 @@ export default function Layout({ children }) {
             </div>
           </div>
           <div className="w-8 flex justify-end">
-            <div className="h-8 w-8 rounded-full bg-muted"></div>
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <LogInIcon className="h-5 w-5" />
+              <span className="sr-only">Login / Signup</span>
+            </Button>
           </div>
         </div>
       </header>
