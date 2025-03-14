@@ -26,7 +26,7 @@ const Navigation = () => {
               className={cn(
                 "flex h-10 w-10 items-center justify-center rounded-full transition-all hover:bg-accent",
                 location.pathname === item.href 
-                  ? "bg-primary text-primary-foreground" 
+                  ? "bg-primary text-black dark:text-white" 
                   : "text-muted-foreground hover:text-foreground"
               )}
               aria-label={item.name}
@@ -62,7 +62,7 @@ export default function Layout({ children }) {
           </div>
           <div className="flex-1 flex justify-center items-center">
             <div className="text-center">
-              <h1 className="text-xl font-semibold tracking-tight">ApplyLog</h1>
+              <h1 className="text-xl font-semibold tracking-tight">Application Log</h1>
               <p className="text-xs text-muted-foreground">by SudeepAngamgari</p>
             </div>
           </div>
