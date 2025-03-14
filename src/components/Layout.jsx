@@ -56,7 +56,9 @@ export default function Layout({ children }) {
       <header className="glass sticky top-0 z-40 border-b">
         <div className="container flex h-16 items-center px-4 md:px-6">
           <div className="flex items-center w-8 absolute">
-            <BriefcaseIcon className="h-6 w-6 text-primary" />
+            <Link to="/" aria-label="Go to home page">
+              <BriefcaseIcon className="h-6 w-6 text-primary" />
+            </Link>
           </div>
           <div className="flex-1 flex justify-center items-center">
             <div className="text-center">
